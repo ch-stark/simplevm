@@ -1,14 +1,10 @@
 apiVersion: hco.kubevirt.io/v1beta1
 kind: HyperConverged
 metadata:
+  name: kubevirt-hyperconverged
   annotations:
     deployOVS: 'false'
-  name: kubevirt-hyperconverged
   namespace: openshift-cnv
-  finalizers:
-    - kubevirt.io/hyperconverged
-  labels:
-    app: kubevirt-hyperconverged
 spec:
   virtualMachineOptions:
     disableFreePageReporting: false
@@ -29,11 +25,9 @@ spec:
     server:
       duration: 24h0m0s
       renewBefore: 12h0m0s
-  infra: {}
   applicationAwareConfig:
     allowApplicationAwareClusterResourceQuota: false
     vmiCalcConfigName: DedicatedVirtualResources
-  evictionStrategy: LiveMigrate
   featureGates:
     deployTektonTaskResources: false
     enableCommonBootImageImport: true
@@ -56,6 +50,5 @@ spec:
     workloadUpdateMethods:
       - LiveMigrate
   uninstallStrategy: BlockUninstallIfWorkloadsExist
-  workloads: {}
   resourceRequirements:
     vmiCPUAllocationRatio: 10
