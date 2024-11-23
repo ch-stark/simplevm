@@ -3,7 +3,6 @@ kind: HyperConverged
 metadata:
   annotations:
     deployOVS: 'false'
-  resourceVersion: '116992'
   name: kubevirt-hyperconverged
   namespace: openshift-cnv
   finalizers:
