@@ -5,9 +5,6 @@ metadata:
     deployOVS: 'false'
   resourceVersion: '116992'
   name: kubevirt-hyperconverged
-  uid: c1d06ba5-86ac-4900-995c-76419267a7f8
-  creationTimestamp: '2024-11-23T19:35:54Z'
-  generation: 2
   namespace: openshift-cnv
   finalizers:
     - kubevirt.io/hyperconverged
